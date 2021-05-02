@@ -33,7 +33,7 @@ RUN yum makecache --timer \
  && yum clean all
 
 #Version checks
-RUN pip3 -v
+RUN pip -v
 
 # Install Setup Tools
 # RUN pip3 install --user setuptools-rust setuptools wheel
