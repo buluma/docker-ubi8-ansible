@@ -27,9 +27,6 @@ RUN yum makecache --timer \
       which \
       hostname \
       python3 \
-      setuptools-rust \
-      setuptools \
-      wheels \
  && yum clean all
 
 # Install Setup Tools
