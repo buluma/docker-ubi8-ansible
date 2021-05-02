@@ -28,7 +28,7 @@ RUN yum makecache --timer \
       which \
       hostname \
       python3 \
-      redhat-rpm-config gcc libffi-devel python-devel \
+      redhat-rpm-config gcc libffi-devel python3-devel \
       openssl-devel \
  && yum clean all
 
@@ -36,7 +36,7 @@ RUN yum makecache --timer \
 RUN pip3 -v
 
 # Install Setup Tools
-RUN pip3 install --user setuptools-rust setuptools wheel
+# RUN pip3 install --user setuptools-rust setuptools wheel
 
 # Install Ansible via Pip.
 RUN pip3 install --user $pip_packages
