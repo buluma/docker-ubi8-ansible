@@ -3,6 +3,7 @@ LABEL maintainer="Michael Buluma"
 ENV container=docker
 
 ENV pip_packages "ansible"
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
 # Silence annoying subscription messages.
 RUN echo "enabled=0" >> /etc/yum/pluginconf.d/subscription-manager.conf
