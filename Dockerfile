@@ -28,7 +28,12 @@ RUN yum makecache --timer \
       which \
       hostname \
       python3 \
+      redhat-rpm-config gcc libffi-devel python-devel \
+      openssl-devel \
  && yum clean all
+
+#Version checks
+RUN pip3 -v
 
 # Install Setup Tools
 RUN pip3 install --user setuptools-rust setuptools wheel
