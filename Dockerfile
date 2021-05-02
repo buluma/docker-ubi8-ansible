@@ -30,11 +30,10 @@ RUN yum makecache --timer \
  && yum clean all
 
 # Install Setup Tools
-# RUN pip3 install --user setuptools-rust setuptools wheel
+RUN pip3 install --user setuptools-rust setuptools wheel
 
 # Install Ansible via Pip.
-# RUN pip3 install --user $pip_packages
-RUN python3 setup.py install --user
+RUN pip3 install --user $pip_packages
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
