@@ -29,7 +29,7 @@ RUN yum makecache --timer \
       python3 \
       setuptools-rust \
       setuptools \
-      wheels
+      wheels \
  && yum clean all
 
 # Install Setup Tools
