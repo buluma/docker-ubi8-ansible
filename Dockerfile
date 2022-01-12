@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.4
+FROM registry.access.redhat.com/ubi8/ubi:8.5
 LABEL maintainer="michael buluma"
 ENV container=docker
 
