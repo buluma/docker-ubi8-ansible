@@ -1,6 +1,6 @@
 # Universal Base Image 8 Ansible Test Image
 
-[![Build Status](https://travis-ci.com/buluma/docker-ubi8-ansible.svg?branch=master)](https://travis-ci.com/buluma/docker-ubi8-ansible) [![Docker Automated build](https://img.shields.io/docker/automated/buluma/docker-ubi8-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/buluma/docker-ubi8-ansible/)
+[![Build and release image](https://github.com/buluma/docker-ubi8-ansible/actions/workflows/build.yml/badge.svg)](https://github.com/buluma/docker-ubi8-ansible/actions/workflows/build.yml) [![Docker Automated build](https://img.shields.io/docker/automated/buluma/docker-ubi8-ansible.svg?maxAge=2592000)](https://hub.docker.com/r/buluma/docker-ubi8-ansible/) ![Docker Pulls](https://img.shields.io/docker/pulls/buluma/docker-ubi8-ansible)
 
 UBI 8 (base of Red Hat Enterprise Linux 8) Docker container for Ansible playbook and role testing.
 
