@@ -1,6 +1,5 @@
-FROM registry.access.redhat.com/ubi8/ubi:latest
-LABEL maintainer="Michael Buluma"
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+FROM registry.access.redhat.com/ubi8/ubi:8.4
+LABEL maintainer="michael buluma"
 ENV container=docker
 
 ENV pip_packages "ansible"
@@ -28,18 +27,12 @@ RUN yum makecache --timer \
       which \
       hostname \
       python3 \
-      redhat-rpm-config gcc libffi-devel python3-devel \
-      openssl-devel \
+      python3-pip \
  && yum clean all
 
-#Version checks
-RUN pip -v
-
-# Install Setup Tools
-# RUN pip3 install --user setuptools-rust setuptools wheel
-
-# Install Ansible via Pip.
-RUN pip3 install --user $pip_packages
+# Install Ansible via pip.
+RUN pip3 install --upgrade pip \
+    && pip3 install $pip_packages
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
